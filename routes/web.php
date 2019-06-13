@@ -16,31 +16,40 @@ Route::get('/', [
     'uses' => 'HomeController@index'
 ]);
 
-Route::get('about', [
+Route::get('thong-tin', [
     'as' => 'client.home.about',
     'uses' => 'HomeController@about'
 ]);
 
 
-Route::group(['prefix' => 'cart'], function() {
+Route::group(['prefix' => 'gio-hang'], function() {
     Route::get('', [
         'as' => 'client.home.cart',
         'uses' => 'CartController@cart'
     ]);
     
-    Route::get('complete', [
+    Route::get('hoan-thanh', [
         'as' => 'client.home.complete',
         'uses' => 'CartController@complete'
     ]);
     
-    Route::get('ckeckout', [
+    Route::get('thanh-toan', [
         'as' => 'client.home.checkout',
         'uses' => 'CartController@checkout'
     ]);
 });
 
 
-Route::get('contact', [
+Route::get('lien-he', [
     'as' => 'client.home.contact',
     'uses' => 'HomeController@contact'
 ]);
+
+
+Route::group(['prefix' => 'san-pham'], function() {
+    Route::get('{id}', [
+        'as' => 'client.home.detail',
+        'uses' => 'HomeController@detail'
+    ]);
+});
+
