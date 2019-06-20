@@ -52,7 +52,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
         Route::middleware('web')
-             ->namespace($this->namespace)
+             ->namespace($this->namespace . '\Client')
              ->group(base_path('routes/web.php'));
     }
 
@@ -71,7 +71,7 @@ class RouteServiceProvider extends ServiceProvider
              ->group(base_path('routes/api.php'));
     }
      /**
-     * Define the "api" routes for the application.
+     * Define the "admin" routes for the application.
      *
      * These routes are typically stateless.
      *

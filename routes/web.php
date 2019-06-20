@@ -51,5 +51,9 @@ Route::group(['prefix' => 'san-pham'], function() {
         'as' => 'client.home.detail',
         'uses' => 'HomeController@detail'
     ]);
+    Route::get('', [
+        'as' => 'client.home.shop',
+        'uses' => 'HomeController@shop'
+    ]);
 });
 

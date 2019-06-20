@@ -23,9 +23,9 @@ class CreateProductsTable extends Migration
             $table->string('avatar')->nullable();
             $table->string('description')->nullable();
             $table->integer('quantity')->unsigned()->nullable()->default(0);
-            $table->text('detail')->nullable()->default('text');
-            $table->bigIncrements('created_by');
-            $table->bigIncrements('updated_by');
+            $table->text('detail')->nullable();
+            $table->bigInteger('created_by');
+            $table->bigInteger('updated_by');
             $table->timestamps();
         });
     }
