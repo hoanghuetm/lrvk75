@@ -9,14 +9,14 @@ class CartController extends Controller
 {
     public function cart()
     {
-        return view('client.home.cart');
+        return view('client.cart');
     }
     public function complete()
     {
-        return view('client.home.complete');
+        return view('client.complete');
     }
     public function checkout()
     {
-        return view('client.home.checkout');
+        return view('client.checkout');
     }
 }

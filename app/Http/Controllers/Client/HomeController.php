@@ -9,22 +9,22 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('client.home.index');
+        return view('client.index');
     }
     public function about()
     {
-        return view('client.home.about');
+        return view('client.about');
     }
     public function contact()
     {
-        return view('client.home.contact');
+        return view('client.contact');
     }
     public function detail()
     {
-        return view('client.home.detail');
+        return view('client.detail');
     }
     public function shop()
     {
-        return view('client.home.shop');
+        return view('client.shop');
     }
 }

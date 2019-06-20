@@ -14,75 +14,101 @@ use Illuminate\Http\Request;
 */
 
 
-Route::get('', [
-    'as' => 'admin.dashboard.index',
-    'uses' => 'DashboardController@index'
-]);
+Route::group(['middleware'=>'guest'], function() {
+    Route::group(['prefix' => 'login'], function () {
+    
+        Route::get('', [
+            'as' => 'admin.auth.showLoginForm',
+            'uses' => 'LoginController@showLoginForm'
+        ]);
+        
+        Route::post('', [
+            'as' => 'admin.auth.login',
+            'uses' => 'LoginController@login'
+        ]);
+    
+    });
+});
 
 
-
-Route::group(['prefix' => 'products'], function() {
-    route::get('',[
-        'as'=> 'admin.products.index',
-        'uses' => 'ProductController@index'
+Route::group(['middleware' => 'auth'], function() {
+    Route::post('logout', [
+        'as' => 'admin.auth.logout',
+        'uses' => 'LoginController@logout'
     ]);
-    route::get('create',[
-        'as'=> 'admin.products.create',
-        'uses' => 'ProductController@create'
+    
+    Route::get('', [
+        'as' => 'admin.dashboard.index',
+        'uses' => 'DashboardController@index'
     ]);
-    route::post('',[
-        'as'=> 'admin.products.store',
-        'uses' => 'ProductController@store'
+    
+    
+    
+    Route::group(['prefix' => 'products'], function() {
+        route::get('',[
+            'as'=> 'admin.products.index',
+            'uses' => 'ProductController@index'
+        ]);
+        route::get('create',[
+            'as'=> 'admin.products.create',
+            'uses' => 'ProductController@create'
+        ]);
+        route::post('',[
+            'as'=> 'admin.products.store',
+            'uses' => 'ProductController@store'
+        ]);
+        route::get('{id}/edit',[
+            'as'=> 'admin.products.edit',
+            'uses' => 'ProductController@edit'
+        ]);
+        route::get('{id}',[
+            'as'=> 'admin.products.update',
+            'uses' => 'ProductController@update'
+        ]);
+        route::get('{id}/delete',[
+            'as'=> 'admin.products.destroy',
+            'uses' => 'ProductController@destroy'
+        ]);
+    });
+    
+    Route::group(['prefix' => 'orders'], function() {
+        route::get('',[
+            'as'=> 'admin.orders.index',
+            'uses' => 'OrderController@index'
+        ]);
+        route::get('processed',[
+            'as'=> 'admin.orders.processed',
+            'uses' => 'OrderController@processed'
+        ]);
+        route::get('{id}/edit',[
+            'as'=> 'admin.orders.edit',
+            'uses' => 'OrderController@edit'
+        ]);
+        route::get('{id}',[
+            'as'=> 'admin.orders.update',
+            'uses' => 'OrderController@update'
+        ]);
+        route::get('{id}/delete',[
+            'as'=> 'admin.orders.destroy',
+            'uses' => 'OrderController@destroy'
+        ]);
+    });
+    
+    Route::resource('categories', 'CategoryController', [
+        'parameters' => [
+            'categories' => 'id'
+        ],
+        'except' => 'show',
+        'as' => 'admin'
     ]);
-    route::get('{id}/edit',[
-        'as'=> 'admin.products.edit',
-        'uses' => 'ProductController@edit'
-    ]);
-    route::get('{id}',[
-        'as'=> 'admin.products.update',
-        'uses' => 'ProductController@update'
-    ]);
-    route::get('{id}/delete',[
-        'as'=> 'admin.products.destroy',
-        'uses' => 'ProductController@destroy'
+    
+    Route::resource('users', 'UserController', [
+        'parameters' => [
+            'users' => 'id'
+        ],
+        'except' => 'show',
+        'as' => 'admin'
     ]);
 });
 
-Route::group(['prefix' => 'orders'], function() {
-    route::get('',[
-        'as'=> 'admin.orders.index',
-        'uses' => 'OrderController@index'
-    ]);
-    route::get('processed',[
-        'as'=> 'admin.orders.processed',
-        'uses' => 'OrderController@processed'
-    ]);
-    route::get('{id}/edit',[
-        'as'=> 'admin.orders.edit',
-        'uses' => 'OrderController@edit'
-    ]);
-    route::get('{id}',[
-        'as'=> 'admin.orders.update',
-        'uses' => 'OrderController@update'
-    ]);
-    route::get('{id}/delete',[
-        'as'=> 'admin.orders.destroy',
-        'uses' => 'OrderController@destroy'
-    ]);
-});
 
-Route::resource('categories', 'CategoryController', [
-    'parameters' => [
-        'categories' => 'id'
-    ],
-    'except' => 'show',
-    'as' => 'admin'
-]);
-
-Route::resource('users', 'UserController', [
-    'parameters' => [
-        'users' => 'id'
-    ],
-    'except' => 'show',
-    'as' => 'admin'
-]);
