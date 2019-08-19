@@ -1,6 +1,6 @@
 @extends('admin.layouts.main')
-@section('title','Order')
 @section('content')
+<!--main-->
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 	<div class="row">
 		<ol class="breadcrumb">
@@ -39,7 +39,8 @@
 										<td>0356653300</td>
 										<td>Thường tín</td>
 										<td>
-											<a href="detailorder.html" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i>Xử lý</a>
+											<a href="detailorder.html" class="btn btn-warning"><i class="fa fa-pencil"
+													aria-hidden="true"></i>Xử lý</a>
 
 										</td>
 									</tr>
@@ -57,4 +58,5 @@
 
 
 </div>
+<!--end main-->
 @endsection

@@ -24,8 +24,8 @@ class CreateProductsTable extends Migration
             $table->string('description')->nullable();
             $table->integer('quantity')->unsigned()->nullable()->default(0);
             $table->text('detail')->nullable();
-            $table->bigInteger('created_by');
-            $table->bigInteger('updated_by');
+            $table->bigInteger('created_by')->unsigned()->nullable();
+            $table->bigInteger('updated_by')->unsigned()->nullable();
             $table->timestamps();
         });
     }

@@ -1,6 +1,6 @@
 @extends('admin.layouts.main')
-@section('title','Order Detail')
 @section('content')
+<!--main-->
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 	<div class="row">
 		<ol class="breadcrumb">
@@ -25,10 +25,13 @@
 										<div class="panel panel-blue">
 											<div class="panel-heading dark-overlay">Thông tin khách hàng</div>
 											<div class="panel-body">
-												<strong><span class="glyphicon glyphicon-user" aria-hidden="true"></span> : Nguyễn thế phúc</strong> <br>
-												<strong><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> : Số điện thoại: 0356653300</strong>
+												<strong><span class="glyphicon glyphicon-user"
+														aria-hidden="true"></span> : Nguyễn thế phúc</strong> <br>
+												<strong><span class="glyphicon glyphicon-phone"
+														aria-hidden="true"></span> : Số điện thoại: 0356653300</strong>
 												<br>
-												<strong><span class="glyphicon glyphicon-send" aria-hidden="true"></span> : Thường tín</strong>
+												<strong><span class="glyphicon glyphicon-send"
+														aria-hidden="true"></span> : Thường tín</strong>
 											</div>
 										</div>
 									</div>
@@ -52,7 +55,7 @@
 										<td>
 											<div class="row">
 												<div class="col-md-4">
-													<img width="100px" src="{{asset('assets/admin')}}/img/ao-khoac.jpg" class="thumbnail">
+													<img width="100px" src="img/ao-khoac.jpg" class="thumbnail">
 												</div>
 												<div class="col-md-8">
 													<p><b>Mã sản phẩm</b>: SP01</p>
@@ -70,7 +73,7 @@
 										<td>
 											<div class="row">
 												<div class="col-md-4">
-													<img width="100px" src="{{asset('assets/admin')}}/img/ao-khoac.jpg" class="thumbnail">
+													<img width="100px" src="img/ao-khoac.jpg" class="thumbnail">
 												</div>
 												<div class="col-md-8">
 													<p><b>Mã sản phẩm</b>: SP02</p>
@@ -83,7 +86,7 @@
 										<td>500.000 VNĐ</td>
 
 									</tr>
-								
+
 								</tbody>
 
 							</table>
@@ -116,5 +119,5 @@
 
 
 </div>
+<!--end main-->
 @endsection
-	

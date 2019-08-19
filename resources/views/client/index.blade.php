@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<a href="shop.html" class="f-product-1" style="background-image: url(images/i1.jpg);">
+				<a href="shop.html" class="f-product-1" style="background-image: url({{asset('assets/client')}}/images/i1.jpg);">
 					<div class="desc">
 						<h2>Mẫu <br>cho <br>Nam</h2>
 					</div>
@@ -13,21 +13,21 @@
 			<div class="col-md-6">
 				<div class="row">
 					<div class="col-md-6">
-						<a href="" class="f-product-2" style="background-image: url(images/i2.jpg);">
+						<a href="" class="f-product-2" style="background-image: url({{asset('assets/client')}}/images/i2.jpg);">
 							<div class="desc">
 								<h2> <br>Váy <br> Mới</h2>
 							</div>
 						</a>
 					</div>
 					<div class="col-md-6">
-						<a href="" class="f-product-2" style="background-image: url(images/i3.jpg);">
+						<a href="" class="f-product-2" style="background-image: url({{asset('assets/client')}}/images/i3.jpg);">
 							<div class="desc">
 								<h2>Sale <br>20% <br>off</h2>
 							</div>
 						</a>
 					</div>
 					<div class="col-md-12">
-						<a href="" class="f-product-2" style="background-image: url(images/i4.jpg);">
+						<a href="" class="f-product-2" style="background-image: url({{asset('assets/client')}}/images/i4.jpg);">
 							<div class="desc">
 								<h2>Giầy <br>cho <br>Nam</h2>
 							</div>
@@ -39,7 +39,7 @@
 	</div>
 </div>
 
-<div id="colorlib-intro" class="colorlib-intro" style="background-image: url(images/banner-1.jpg);"
+<div id="colorlib-intro" class="colorlib-intro" style="background-image: url({{asset('assets/client')}}/images/banner-1.jpg);"
 	data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
 	<div class="container">
@@ -82,7 +82,7 @@
 		<div class="row">
 			<div class="col-md-3 text-center">
 				<div class="product-entry">
-					<div class="product-img" style="background-image: url(images/quan-kaki-xanh-den-qk171-9771.jpg);">
+					<div class="product-img" style="background-image: url({{asset('assets/client')}}/images/quan-kaki-xanh-den-qk171-9771.jpg);">
 						<div class="cart">
 							<p>
 								<span class="addtocart"><a href="cart.html"><i
@@ -101,7 +101,7 @@
 			</div>
 			<div class="col-md-3 text-center">
 				<div class="product-entry">
-					<div class="product-img" style="background-image: url(images/ao-so-mi-trang-kem-asm836-8193.jpg);">
+					<div class="product-img" style="background-image: url({{asset('assets/client')}}/images/ao-so-mi-trang-kem-asm836-8193.jpg);">
 						<div class="cart">
 							<p>
 								<span class="addtocart"><a href="cart.html"><i
@@ -120,7 +120,7 @@
 			</div>
 			<div class="col-md-3 text-center">
 				<div class="product-entry">
-					<div class="product-img" style="background-image: url(images/6ds19c007.jpg);">
+					<div class="product-img" style="background-image: url({{asset('assets/client')}}/images/6ds19c007.jpg);">
 
 						<div class="cart">
 							<p>
@@ -140,7 +140,7 @@
 			</div>
 			<div class="col-md-3 text-center">
 				<div class="product-entry">
-					<div class="product-img" style="background-image: url(images/ao-nu-so-mi-co-co-duc.jpg);">
+					<div class="product-img" style="background-image: url({{asset('assets/client')}}/images/ao-nu-so-mi-co-co-duc.jpg);">
 
 						<div class="cart">
 							<p>
@@ -173,7 +173,7 @@
 		<div class="row">
 			<div class="col-md-3 text-center">
 				<div class="product-entry">
-					<div class="product-img" style="background-image: url(images/ao-so-mi-trang-kem-asm836-8193.jpg);">
+					<div class="product-img" style="background-image: url({{asset('assets/client')}}/images/ao-so-mi-trang-kem-asm836-8193.jpg);">
 						<p class="tag"><span class="new">New</span></p>
 						<div class="cart">
 							<p>
@@ -193,7 +193,7 @@
 			</div>
 			<div class="col-md-3 text-center">
 				<div class="product-entry">
-					<div class="product-img" style="background-image: url(images/6ds19c007.jpg);">
+					<div class="product-img" style="background-image: url({{asset('assets/client')}}/images/6ds19c007.jpg);">
 						<p class="tag"><span class="new">New</span></p>
 
 						<div class="cart">
@@ -214,7 +214,7 @@
 			</div>
 			<div class="col-md-3 text-center">
 				<div class="product-entry">
-					<div class="product-img" style="background-image: url(images/ao-nu-so-mi-co-co-duc.jpg);">
+					<div class="product-img" style="background-image: url({{asset('assets/client')}}/images/ao-nu-so-mi-co-co-duc.jpg);">
 						<p class="tag"><span class="new">New</span></p>
 
 						<div class="cart">
@@ -235,7 +235,7 @@
 			</div>
 			<div class="col-md-3 text-center">
 				<div class="product-entry">
-					<div class="product-img" style="background-image: url(images/dam_nu_xoe_dep.jpg);">
+					<div class="product-img" style="background-image: url({{asset('assets/client')}}/images/dam_nu_xoe_dep.jpg);">
 						<p class="tag"><span class="new">New</span></p>
 
 						<div class="cart">
@@ -256,7 +256,7 @@
 			</div>
 			<div class="col-md-3 text-center">
 				<div class="product-entry">
-					<div class="product-img" style="background-image: url(images/Ao_nu_so_mi_cham_bi.jpg);">
+					<div class="product-img" style="background-image: url({{asset('assets/client')}}/images/Ao_nu_so_mi_cham_bi.jpg);">
 						<p class="tag"><span class="new">New</span></p>
 
 						<div class="cart">
@@ -277,7 +277,7 @@
 			</div>
 			<div class="col-md-3 text-center">
 				<div class="product-entry">
-					<div class="product-img" style="background-image: url(images/ao-nu-phoi-vien.jpg);">
+					<div class="product-img" style="background-image: url({{asset('assets/client')}}/images/ao-nu-phoi-vien.jpg);">
 						<p class="tag"><span class="new">New</span></p>
 
 						<div class="cart">
@@ -298,7 +298,7 @@
 			</div>
 			<div class="col-md-3 text-center">
 				<div class="product-entry">
-					<div class="product-img" style="background-image: url(images/ao-so-mi-ca-ro-xam-xanh-asm1228-10199.jpg);">
+					<div class="product-img" style="background-image: url({{asset('assets/client')}}/images/ao-so-mi-ca-ro-xam-xanh-asm1228-10199.jpg);">
 						<p class="tag"><span class="new">New</span></p>
 						<div class="cart">
 							<p>
@@ -318,7 +318,7 @@
 			</div>
 			<div class="col-md-3 text-center">
 				<div class="product-entry">
-					<div class="product-img" style="background-image: url(images/ao-so-mi-hoa-tiet-den-asm1223-10191.jpg);">
+					<div class="product-img" style="background-image: url({{asset('assets/client')}}/images/ao-so-mi-hoa-tiet-den-asm1223-10191.jpg);">
 						<p class="tag"><span class="new">New</span></p>
 						<div class="cart">
 							<p>

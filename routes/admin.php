@@ -36,13 +36,16 @@ Route::group(['middleware' => 'auth'], function() {
         'as' => 'admin.auth.logout',
         'uses' => 'LoginController@logout'
     ]);
+
+    // Route::get('logout', [
+    //     'as' => 'admin.auth.logout',
+    //     'uses' => 'LoginController@logout'
+    // ]);
     
     Route::get('', [
         'as' => 'admin.dashboard.index',
         'uses' => 'DashboardController@index'
     ]);
-    
-    
     
     Route::group(['prefix' => 'products'], function() {
         route::get('',[

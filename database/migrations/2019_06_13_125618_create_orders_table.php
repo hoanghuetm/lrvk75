@@ -20,8 +20,8 @@ class CreateOrdersTable extends Migration
             $table->string('address')->nullable();
             $table->string('comment')->nullable();
             $table->string('status')->nullable();
-            $table->bigInteger('created_by');
-            $table->bigInteger('updated_by');
+            $table->bigInteger('created_by')->unsigned()->nullable();
+            $table->bigInteger('updated_by')->unsigned()->nullable();
             $table->timestamps();
         });
     }
